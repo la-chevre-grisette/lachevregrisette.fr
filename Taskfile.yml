@@ -1,7 +1,26 @@
 version: "3"
 
 tasks:
+  js:
+    desc: Copie le javascript de UIKit
+    cmds:
+      - cp node_modules/uikit/dist/js/uikit.min.js themes/goat/assets/js/uikit.min.js
+    sources:
+      - node_modules/uikit/dist/js/*.min.js
+    generates:
+      - themes/goat/assets/js/uikit.min.js
+
+  css:
+    desc: Compile les feuilles de styles CSS
+    cmds:
+      - pnpm exec lessc --rewrite-urls=local themes/goat/assets/less/uikit.theme.less themes/goat/assets/css/main.css
+    sources:
+      - themes/goat/assets/less/*.less
+    generates:
+      - themes/goat/assets/css/main.css
+
   preview:
     desc: Affiche une pré-version du site localement
+    deps: [js, css]
     cmds:
       - hugo server --buildDrafts
