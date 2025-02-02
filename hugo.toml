@@ -1,0 +1,4 @@
+baseURL = 'https://lachevregrisette.fr/'
+languageCode = 'fr-FR'
+title = 'La Chèvre Grisette'
+theme = 'goat'

@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  preview:
+    desc: Affiche une pré-version du site localement
+    cmds:
+      - hugo server --buildDrafts
