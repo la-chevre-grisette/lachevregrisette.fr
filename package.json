@@ -1,5 +1,6 @@
 {
 	"devDependencies": {
+		"@types/uikit": "^3.14.5",
 		"less": "^4.2.2",
 		"uikit": "^3.22.4"
 	}

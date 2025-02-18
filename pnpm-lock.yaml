@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@types/uikit':
+        specifier: ^3.14.5
+        version: 3.14.5
       less:
         specifier: ^4.2.2
         version: 4.2.2
@@ -16,6 +19,9 @@ importers:
         version: 3.22.4
 
 packages:
+
+  '@types/uikit@3.14.5':
+    resolution: {integrity: sha512-3Q1CRzoAVLm+XNCP/2P5DbLuX98fkNLYxGQ1qUdV6cdzDTBbyVeH+est0LTZPtro9FUwXTNu8WfxfwLymFbZvQ==}
 
   copy-anything@2.0.6:
     resolution: {integrity: sha512-1j20GZTsvKNkc4BY3NpMOM8tt///wY3FpIzozTOFO2ffuZcV61nojHXVKIy3WM+7ADCy5FVhdZYHYDdgTU0yJw==}
@@ -90,6 +96,8 @@ packages:
     resolution: {integrity: sha512-EeBRwwv8dy0UxMFloSWJmqF65LAhyW2eTqhjvlKt+4aeILL6M+r5IZ5IN9kycDAIFQwtG4XldZZ8IOZ+CZL9+w==}
 
 snapshots:
+
+  '@types/uikit@3.14.5': {}
 
   copy-anything@2.0.6:
     dependencies:
