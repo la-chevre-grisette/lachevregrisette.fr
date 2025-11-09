@@ -1,3 +1,10 @@
-baseURL = 'https://lachevregrisette.fr/'
+baseURL = 'https://www.lachevregrisette.fr/'
 languageCode = 'fr-FR'
 title = 'La Chèvre Grisette'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true

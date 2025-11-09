@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{ with .Site.GetPage "/accueil" }}
+  <div class="uk-section uk-section-secondary uk-padding-remove">
+    <div id="title-card" class="uk-container uk-text-center">
+    {{ .Content }}
+    </div>
+  </div>
+
+    {{ range .Pages }}
+    <div class="uk-section uk-section-muted">
+      <div class="uk-child-width-expand@s" uk-grid>
+        {{ if eq (.Param "position") "gauche" }}
+        <div class="uk-text-center">
+          <img src="https://placehold.co/500" />
+        </div>
+        {{ end }}
+        <div>
+          <div class="uk-container uk-padding-large">
+          {{ .Content }}
+          </div>
+        </div>
+        {{ if eq (.Param "position") "droite" }}
+        <div class="uk-text-center">
+          <img src="https://placehold.co/500" />
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  {{ end }}
+{{ end }}
