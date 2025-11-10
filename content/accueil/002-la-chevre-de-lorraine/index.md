@@ -1,6 +1,5 @@
 ---
 params:
-    image: ""
     position: "droite"
 ---
 

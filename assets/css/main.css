@@ -13169,3 +13169,13 @@ h2 {
   background-color: rgba(226, 226, 226, 0.7);
   max-width: 30em;
 }
+.home-section-image {
+  min-height: 800px;
+}
+.minilogo img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.home-section-contact * {
+  text-shadow: 1px 1px 5px #fff;
+}

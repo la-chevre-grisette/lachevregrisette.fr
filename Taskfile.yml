@@ -3,8 +3,9 @@ version: "3"
 tasks:
   css:
     desc: Compile les feuilles de styles CSS
+    watch: true
     cmds:
-      - pnpm exec lessc --rewrite-urls=local assets/less/uikit.theme.less assets/css/main.css
+      - pnpm exec lessc --rewrite-urls=local assets/less/goat.theme.less assets/css/main.css
     sources:
       - assets/less/*.less
     generates:
@@ -12,6 +13,7 @@ tasks:
 
   preview:
     desc: Affiche une pré-version du site localement
+    interactive: true
     deps: [css]
     cmds:
       - hugo server --buildDrafts

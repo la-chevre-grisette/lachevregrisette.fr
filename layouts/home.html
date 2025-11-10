@@ -1,31 +1,60 @@
 {{ define "main" }}
   {{ with .Site.GetPage "/accueil" }}
-  <div class="uk-section uk-padding-remove">
-    <div class="uk-cover-container uk-text-center">
-      <video src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/videos/background.mp4"
-    autoplay loop muted playsinline uk-cover></video>
-      <div id="title-card" class="uk-inline">
-        {{ .Content }}
+    <div class="uk-section uk-padding-remove">
+      <div class="uk-cover-container uk-text-center">
+        <video src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/videos/background.mp4"
+      autoplay loop muted playsinline uk-cover></video>
+        <div id="title-card" class="uk-inline">
+          {{ .Content }}
+        </div>
       </div>
     </div>
-  </div>
 
     {{ range .Pages }}
-    <div class="uk-section uk-section-muted uk-padding-remove">
-      <div class="uk-child-width-1-2@s" uk-grid>
-        {{ if eq (.Param "position") "gauche" }}
-        <div class="uk-background-cover" data-src="https://placehold.co/500" uk-img></div>
-        {{ end }}
-        <div>
-          <div class="uk-padding-large">
-          {{ .Content }}
+      {{ $imagePath := (.Resources.Get "image.webp").RelPermalink }}
+      <div class="uk-section uk-section-muted uk-padding-remove">
+        <div class="uk-flex-center uk-flex-middle uk-child-width-1-2@m" uk-grid>
+          {{ if eq (.Param "position") "gauche" }}
+          <div class="home-section-image uk-cover-container uk-visible@m" >
+            <img src="{{ $imagePath }}" uk-cover />
+          </div>
+          {{ end }}
+          <div>
+            <div class="uk-padding-large">
+              {{ .Content }}
+            </div>
+          </div>
+          {{ if eq (.Param "position") "droite" }}
+          <div class="home-section-image uk-cover-container uk-visible@m">
+            <img src="{{ $imagePath }}" uk-cover />
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+
+    {{ with .Site.GetPage "/contact" }}
+      {{ $backgroundPath := (.Resources.Get "fond.webp").RelPermalink }}
+      <div class="home-section-contact uk-section uk-background-cover uk-padding-remove"
+           style='background-image: url("{{ $backgroundPath }}");'>
+        <div class="home-section-image uk-flex-center uk-flex-middle uk-text-center uk-child-width-1-2@m" uk-grid>
+          <div>
+            <div class="uk-container uk-padding">
+              {{ with .Page.GetPage "infos" }}
+                {{ .Content }}
+              {{ end }}
+            </div>
+          </div>
+          <div>
+            <div class="uk-container uk-padding">
+              {{ with .Page.GetPage "contact" }}
+                {{ .Content }}
+              {{ end }}
+            </div>
+          </div>
           </div>
         </div>
-        {{ if eq (.Param "position") "droite" }}
-        <div class="uk-background-cover" data-src="https://placehold.co/500" uk-img></div>
-        {{ end }}
       </div>
-    </div>
     {{ end }}
   {{ end }}
 {{ end }}

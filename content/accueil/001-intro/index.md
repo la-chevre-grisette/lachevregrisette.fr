@@ -1,6 +1,5 @@
 ---
 params:
-    image: ""
     position: "gauche"
 ---
 
@@ -16,8 +15,9 @@ Ici, le cycle naturel des naissances chez la chèvre est respecté, tant par la
 saisonnalité que par les saillies naturelles des boucs. Les produits ne sont pas
 disponibles toute l'année.
 
-<img width="100" height="100" alt="AB" src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/logo-ab.png" />
-<img width="100" height="100" alt="Eurofeuille" src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/logo-eurofeuille.png" />
-<img width="100" height="100" alt="Ecocert" src="/images/logo-ecocert.webp" />
+![Logo Agriculture Biologique](https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/logo-ab.png)
+![Eurofeuille](https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/logo-eurofeuille.png)
+![Ecocert](/images/logo-ecocert.webp)
+{class="minilogo"}
 
 [<button class="uk-button uk-button-primary uk-button-large">Nos produits</button>](/)

@@ -1,3 +1,6 @@
+// Import UIkit default theme (or uikit.less with only core styles)
+@import "node_modules/uikit/src/less/uikit.theme.less";
+
 // Fonts
 @import url("https://fonts.cdnfonts.com/css/zen-maru-gothic?styles=148845,148842");
 @import url("https://fonts.cdnfonts.com/css/gagalin");
@@ -35,4 +38,19 @@ h2 {
 #title-card {
     background-color: rgba(226, 226, 226, 0.7);
     max-width: 30em;
+}
+
+.home-section-image {
+    min-height: 800px;
+}
+
+.minilogo {
+    img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+}
+
+.home-section-contact * {
+    text-shadow: 1px 1px 5px #fff,
 }
