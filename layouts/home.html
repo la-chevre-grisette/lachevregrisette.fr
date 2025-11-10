@@ -1,28 +1,28 @@
 {{ define "main" }}
   {{ with .Site.GetPage "/accueil" }}
-  <div class="uk-section uk-section-secondary uk-padding-remove">
-    <div id="title-card" class="uk-container uk-text-center">
-    {{ .Content }}
+  <div class="uk-section uk-padding-remove">
+    <div class="uk-cover-container uk-text-center">
+      <video src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/videos/background.mp4"
+    autoplay loop muted playsinline uk-cover></video>
+      <div id="title-card" class="uk-inline">
+        {{ .Content }}
+      </div>
     </div>
   </div>
 
     {{ range .Pages }}
-    <div class="uk-section uk-section-muted">
-      <div class="uk-child-width-expand@s" uk-grid>
+    <div class="uk-section uk-section-muted uk-padding-remove">
+      <div class="uk-child-width-1-2@s" uk-grid>
         {{ if eq (.Param "position") "gauche" }}
-        <div class="uk-text-center">
-          <img src="https://placehold.co/500" />
-        </div>
+        <div class="uk-background-cover" data-src="https://placehold.co/500" uk-img></div>
         {{ end }}
         <div>
-          <div class="uk-container uk-padding-large">
+          <div class="uk-padding-large">
           {{ .Content }}
           </div>
         </div>
         {{ if eq (.Param "position") "droite" }}
-        <div class="uk-text-center">
-          <img src="https://placehold.co/500" />
-        </div>
+        <div class="uk-background-cover" data-src="https://placehold.co/500" uk-img></div>
         {{ end }}
       </div>
     </div>

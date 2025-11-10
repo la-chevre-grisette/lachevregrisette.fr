@@ -8,3 +8,5 @@ title = 'La Chèvre Grisette'
       [markup.goldmark.parser.attribute]
         block = true
         title = true
+    [markup.goldmark.renderer]
+      unsafe = true
