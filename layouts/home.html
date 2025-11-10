@@ -1,15 +1,5 @@
 {{ define "main" }}
   {{ with .Site.GetPage "/accueil" }}
-    <div class="uk-section uk-padding-remove">
-      <div class="uk-cover-container uk-text-center">
-        <video src="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/videos/background.mp4"
-      autoplay loop muted playsinline uk-cover></video>
-        <div id="title-card" class="uk-inline">
-          {{ .Content }}
-        </div>
-      </div>
-    </div>
-
     {{ range .Pages }}
       {{ $imagePath := (.Resources.Get "image.webp").RelPermalink }}
       <div class="uk-section uk-section-muted uk-padding-remove">
