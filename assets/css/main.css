@@ -13172,10 +13172,14 @@ h2 {
 .home-section-image {
   min-height: 800px;
 }
-.minilogo img {
+.social img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.certifs img {
   max-width: 100px;
   max-height: 100px;
 }
 .home-section-contact * {
-  text-shadow: 1px 1px 5px #fff;
+  filter: drop-shadow(1px 1px 5px #fff);
 }

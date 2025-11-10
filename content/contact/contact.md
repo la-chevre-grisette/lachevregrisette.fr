@@ -8,6 +8,5 @@
 
 Pour recevoir nos actualités, suivez-nous sur les réseaux
 
-[![Facebook](https://cdn.simpleicons.org/facebook)](https://www.facebook.com/lachevregrisette/")
-[![Instagram](https://cdn.simpleicons.org/instagram)](https://www.instagram.com/la_chevre_grisette/)
-{class="minilogo"}
+{{< social url="https://www.facebook.com/lachevregrisette/" alt="Facebook" icon="facebook" >}}
+{{< social url="https://www.instagram.com/la_chevre_grisette/" alt="Instagram" icon="instagram" >}}

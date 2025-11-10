@@ -1,6 +1,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+      content="La chèvre Grisette vous propose des fromages types crottins et bûches, frais ou affinés demi-secs à secs, natures ou aromatisés." />
+<meta name="keywords" content="chèvre grisette, chèvre, grisette, ferme, bio, 	fromages, yaourts" />
+
+<!-- OpenGraph -->
+<meta property="og:title" name="og:title" content="La Chèvre Grisette" />
+<meta property="og:type" name="og:type" content="website" />
+<meta property="og:image" name="og:image"
+    content="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/logo.png" />
+<meta property="og:description" name="og:description" content="Elevage caprin avec transformation fromagère" />
+<meta property="og:locale" name="og:locale" content="fr_FR" />
+<meta property="og:site_name" name="og:site_name" content="La Chèvre Grisette" />
+<meta property="og:url" content="https://www.lachevregrisette.fr/" />
+<meta property="twitter:card" name="twitter:card" content="summary" />
+
+<!-- Experiences -->
+<link rel="canonical" href="https://www.lachevregrisette.fr" />
+<link rel="preconnect" href="https://cdn.simpleicons.org" />
+<link rel="preconnect" href="https://fonts.cdnfonts.com" />
+<link rel="preconnect" href="https://media.githubusercontent.com" />
+
+<!-- Site -->
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" type="image/png" href="https://media.githubusercontent.com/media/la-chevre-grisette/art/main/images/favicon_32.png" />
+
+<!-- Scripts, CSS -->
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
